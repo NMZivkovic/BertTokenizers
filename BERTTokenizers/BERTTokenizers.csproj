@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Nikola M. Zivkovic</Authors>
+    <Company>Rubik's Code (rubikscode.net)</Company>
+    <Copyright>Rubik's Code</Copyright>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryType>S</RepositoryType>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/NMZivkovic/BertTokenizers</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/NMZivkovic/BertTokenizers</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Description>Open source project for BERT tokenizers that can be used in C#.</Description>
+    <PackageReleaseNotes>Open source project for BERT tokenizers that can be used in C#.</PackageReleaseNotes>
+    <PackageTags>BERT, Tokenizer, charp, dotnet</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Vocabularies\base_cased.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Vocabularies\base_cased_german.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Vocabularies\base_cased_large.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Vocabularies\base_cased_multilingual.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Vocabularies\base_uncased.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Vocabularies\base_uncased_large.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="Assets\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
+</Project>
