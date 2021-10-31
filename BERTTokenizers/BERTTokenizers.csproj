@@ -30,24 +30,48 @@ This package contains tokenizers for following models:
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Vocabularies\base_cased.txt">
+    <None Remove="Vocabularies\base_cased.txt" />
+    <None Remove="Vocabularies\base_cased_german.txt" />
+    <None Remove="Vocabularies\base_cased_large.txt" />
+    <None Remove="Vocabularies\base_cased_multilingual.txt" />
+    <None Remove="Vocabularies\base_uncased.txt" />
+    <None Remove="Vocabularies\base_uncased_large.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Vocabularies\base_cased.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Vocabularies\base_cased_german.txt">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+    <Content Include="Vocabularies\base_cased_german.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Vocabularies\base_cased_large.txt">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+    <Content Include="Vocabularies\base_cased_large.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Vocabularies\base_cased_multilingual.txt">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+    <Content Include="Vocabularies\base_cased_multilingual.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Vocabularies\base_uncased.txt">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+    <Content Include="Vocabularies\base_uncased.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Vocabularies\base_uncased_large.txt">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+    <Content Include="Vocabularies\base_uncased_large.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -57,9 +81,8 @@ This package contains tokenizers for following models:
       <PackagePath></PackagePath>
     </None>
   </ItemGroup>
-
+  
   <ItemGroup>
     <Folder Include="Assets\" />
   </ItemGroup>
-
 </Project>

@@ -6,3 +6,4 @@
 /BERTTokenizers/obj
 /BERTTokenizersTests/obj
 /.vs
+/BERTTokenizersTests/bin/Debug/net5.0
