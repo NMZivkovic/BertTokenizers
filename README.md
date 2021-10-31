@@ -63,17 +63,17 @@
 ## About The Project
 
 While working with BERT Models from Huggingface in combination with ML.NET, I stumbled upon several challenges.
-I documented them in here: https://rubikscode.net/2021/10/25/using-huggingface-transformers-with-ml-net/
-However, the biggest challenge by far was that I needed to implement my own tokenizer and pairing them with correct vocabularies.
-So, I decided to extend it and publish my implementation as an open source implementation.
+I documented them in [here](https://rubikscode.net/2021/10/25/using-huggingface-transformers-with-ml-net/).</br>
+However, the biggest challenge by far was that I needed to implement my own tokenizer and pair them with the correct vocabulary.
+So, I decided to extend it and publish my implementation as an open-source project.
 
-This repository contains tokenizers for following models:
-    · BERT Base
-    · BERT Large
-    · BERT German
-    · BERT Multilingual
-    · BERT Base Uncased
-    · BERT Large Uncased
+This repository contains tokenizers for following models:<br />
+    · BERT Base<br />
+    · BERT Large<br />
+    · BERT German<br />
+    · BERT Multilingual<br />
+    · BERT Base Uncased<br />
+    · BERT Large Uncased<br />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -88,23 +88,65 @@ This repository contains tokenizers for following models:
 
 The project is available as NuGet package.
 
-### Prerequisites
+### Installation
 
 To add BERT Tokenizers to your project use dotnet command:
-* ```sh
-  dotnet add BERTTokenizers
- ```
+
+```sh
+dotnet add BERTTokenizers
+```
+
+</br>
 Or install it with package manager:
-* ```sh
-  Install-Package BERTTokenizers
-  ```
+
+```bash
+Install-Package BERTTokenizers
+```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+For example, you want to use Huggingface BERT Base Model whose input is defined like this:
 
-_For more examples, please refer to this [Blog Post](https://example.com)_
+```csharp
+
+public class BertInput
+{
+    [VectorType(1, 256)]
+    [ColumnName("input_ids")]
+    public long[] InputIds { get; set; }
+
+    [VectorType(1, 256)]
+    [ColumnName("attention_mask")]
+    public long[] AttentionMask { get; set; }
+
+    [VectorType(1, 256)]
+    [ColumnName("token_type_ids")]
+    public long[] TypeIds { get; set; }
+}
+
+```
+
+For this you need to encode sentences like this:
+
+```csharp
+
+var sentence = "I love you";
+
+var tokenizer = new BertBaseTokenizer();
+
+var encoded = tokenizer.Encode(256, sentence);
+
+var bertInput = new BertInput()
+                {
+                    InputIds = encoded.InputIds,
+                    AttentionMask = encoded.AttentionMask,
+                    TypeIds = encoded.TokenTypeIds,
+                };
+
+```
+
+_For more examples, please refer to this [Blog Post](https://rubikscode.net/2021/11/01/bert-tokenizers-for-ml-net/)_
 
 See the [open issues](https://github.com/NMZivkovic/BertTokenizers/issues) for a full list of proposed features (and known issues).
 
@@ -139,31 +181,31 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Nikola M. Zivkovic
-n.zivkovic@rubikscode.net
-[LinkedIn](https://www.linkedin.com/in/nmzivkovic/)
-[@twitter_handle](https://twitter.com/NMZivkovic)
+Nikola M. Zivkovic</br>
+n.zivkovic@rubikscode.net</br>
+[LinkedIn](https://www.linkedin.com/in/nmzivkovic/)</br>
+[@NMZivkovic](https://twitter.com/NMZivkovic)</br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Gianluca Bertani](Gainluca Bertrani) - Performance Improvements
+* Gianluca Bertani - Performance Improvements
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [contributors-url]: https://github.com/NMZivkovic/BertTokenizers/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [forks-url]: https://github.com/NMZivkovic/BertTokenizers/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [stars-url]: https://github.com/NMZivkovic/BertTokenizers/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [issues-url]: https://github.com/NMZivkovic/BertTokenizers/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [license-url]: https://github.com/NMZivkovic/BertTokenizers/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nmzivkovic/
