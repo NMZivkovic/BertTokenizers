@@ -65,7 +65,8 @@
 While working with BERT Models from Huggingface in combination with ML.NET, I stumbled upon several challenges.
 I documented them in [here](https://rubikscode.net/2021/10/25/using-huggingface-transformers-with-ml-net/).</br>
 However, the biggest challenge by far was that I needed to implement my own tokenizer and pair them with the correct vocabulary.
-So, I decided to extend it and publish my implementation as an open-source project.
+So, I decided to extend it and publish my implementation as a NuGet package and an open-source project.
+More info about this project can be found in this [blog post](https://rubikscode.net/2021/11/01/bert-tokenizers-for-ml-net/)
 
 This repository contains tokenizers for following models:<br />
     · BERT Base<br />
