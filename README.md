@@ -93,7 +93,7 @@ The project is available as NuGet package.
 To add BERT Tokenizers to your project use dotnet command:
 
 ```sh
-dotnet add BERTTokenizers
+dotnet add package BERTTokenizers
 ```
 
 </br>
