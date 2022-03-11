@@ -27,6 +27,7 @@ This package contains tokenizers for following models:
     · BERT Large Uncased</Description>
     <PackageReleaseNotes>Open-source project for BERT tokenizers that can be used in C#.</PackageReleaseNotes>
     <PackageTags>BERT, Tokenizer, charp, dotnet</PackageTags>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>

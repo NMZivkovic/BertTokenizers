@@ -36,6 +36,11 @@ namespace BERTTokenizers.Base
             return output.Select(x => (InputIds: x.Item1, TokenTypeIds: x.Item2, AttentionMask:x.Item3)).ToList();
         }
 
+        public string IdToToken(int id)
+        {
+            return _vocabulary[id];
+        }
+
         public List<string> Untokenize(List<string> tokens)
         {
             var currentToken = string.Empty;

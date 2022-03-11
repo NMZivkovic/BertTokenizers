@@ -140,9 +140,9 @@ var encoded = tokenizer.Encode(256, sentence);
 
 var bertInput = new BertInput()
                 {
-                    InputIds = encoded.InputIds,
-                    AttentionMask = encoded.AttentionMask,
-                    TypeIds = encoded.TokenTypeIds,
+                    InputIds = encoded.Select(t => t.InputIds).ToArray(),
+                    AttentionMask = encoded.Select(t => t.AttentionMask).ToArray(),
+                    TypeIds = encoded.Select(t => t.TokenTypeIds).ToArray()
                 };
 
 ```
