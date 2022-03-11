@@ -12,13 +12,7 @@
     <RepositoryUrl>https://github.com/NMZivkovic/BertTokenizers</RepositoryUrl>
     <PackageProjectUrl>https://github.com/NMZivkovic/BertTokenizers</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <Description>While working with BERT Models from Huggingface in combination with ML.NET, I stumbled upon several challenges.
-I documented them in [here](https://rubikscode.net/2021/10/25/using-huggingface-transformers-with-ml-net/).
-However, the biggest challenge by far was that I needed to implement my own tokenizer and pairing them with correct vocabularies.
-So, I decided to extend it and publish my implementation as an open source project.
-Github Repo: https://github.com/NMZivkovic/BertTokenizers
-
-This package contains tokenizers for following models:
+    <Description>This package contains tokenizers for following models:
     · BERT Base
     · BERT Large
     · BERT German
@@ -27,7 +21,7 @@ This package contains tokenizers for following models:
     · BERT Large Uncased</Description>
     <PackageReleaseNotes>Open-source project for BERT tokenizers that can be used in C#.</PackageReleaseNotes>
     <PackageTags>BERT, Tokenizer, charp, dotnet</PackageTags>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
   </PropertyGroup>
 
   <ItemGroup>

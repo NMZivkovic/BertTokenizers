@@ -4,7 +4,7 @@ namespace BERTTokenizers
 {
     public class BertUncasedLargeTokenizer : UncasedTokenizer
     {
-        public BertUncasedLargeTokenizer() : base("./Vocabularies/base_cased.txt")
+        public BertUncasedLargeTokenizer() : base("./Vocabularies/base_uncased_large.txt")
         {
         }
     }
