@@ -29,6 +29,23 @@ namespace BERTTokenizersTests
         }
 
         [Fact]
+        public void Encode_admin_example()
+        {
+            var sentence = "Joe is an admin";
+
+            var encoded = _tokenizer.Encode(8, sentence);
+            Assert.Equal(8, encoded.Count);
+            Assert.Equal((101, 0, 1), encoded[0]);
+            Assert.Equal((3533, 0, 1), encoded[1]);
+            Assert.Equal((2003, 0, 1), encoded[2]);
+            Assert.Equal((2019, 0, 1), encoded[3]);
+            Assert.Equal((4748, 0, 1), encoded[4]);
+            Assert.Equal((10020, 0, 1), encoded[5]);
+            Assert.Equal((102, 0, 1), encoded[6]);
+            Assert.Equal((0, 0, 0), encoded[7]);
+        }
+
+        [Fact]
         public void Encode_sentence()
         {
             var sentence = "I love you";

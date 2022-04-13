@@ -118,7 +118,7 @@ namespace BERTTokenizers.Base
             {
                 string prefix = null;
                 int subwordLength = remaining.Length;
-                while (subwordLength > 2)
+                while (subwordLength >= 2)
                 {
                     string subword = remaining.Substring(0, subwordLength);
                     if (!_vocabularyDict.ContainsKey(subword))
