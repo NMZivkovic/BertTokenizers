@@ -2,8 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/BERTTokenizers/bin
-/BERTTokenizers/obj
-/BERTTokenizersTests/obj
+/src/bin
+/src/obj
+/tests/obj
+/tests/bin
 /.vs
-/BERTTokenizersTests/bin/Debug/net5.0
