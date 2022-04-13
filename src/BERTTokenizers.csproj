@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0;net5.0</TargetFrameworks>
     <Authors>Nikola M. Zivkovic</Authors>
     <Company>Rubik's Code (rubikscode.net)</Company>
     <Copyright>Rubik's Code</Copyright>
