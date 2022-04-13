@@ -21,9 +21,9 @@ namespace BERTTokenizersTests
             var tokens = _tokenizer.Tokenize(sentence);
             Assert.Equal(5, tokens.Count);
             Assert.Equal(("[CLS]", 101, 0), tokens[0]);
-            Assert.Equal(("i", 178, 0), tokens[1]);
-            Assert.Equal(("love", 1567, 0), tokens[2]);
-            Assert.Equal(("you", 1128, 0), tokens[3]);
+            Assert.Equal(("i", 1045, 0), tokens[1]);
+            Assert.Equal(("love", 2293, 0), tokens[2]);
+            Assert.Equal(("you", 2017, 0), tokens[3]);
             Assert.Equal(("[SEP]", 102, 0), tokens[4]);
 
         }
@@ -36,9 +36,9 @@ namespace BERTTokenizersTests
             var encoded = _tokenizer.Encode(6, sentence);
             Assert.Equal(6, encoded.Count);
             Assert.Equal((101, 0, 1), encoded[0]);
-            Assert.Equal((178, 0, 1), encoded[1]);
-            Assert.Equal((1567, 0, 1), encoded[2]);
-            Assert.Equal((1128, 0, 1), encoded[3]);
+            Assert.Equal((1045, 0, 1), encoded[1]);
+            Assert.Equal((2293, 0, 1), encoded[2]);
+            Assert.Equal((2017, 0, 1), encoded[3]);
             Assert.Equal((102, 0, 1), encoded[4]);
             Assert.Equal((0, 0, 0), encoded[5]);
         }
