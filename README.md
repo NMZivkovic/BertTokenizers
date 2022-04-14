@@ -7,7 +7,7 @@
 *** Thanks again!
 -->
 
-[![Donate]][donate-url]
+[![Donate][donate-shield]][donate-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -19,13 +19,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/NMZivkovic/BertTokenizers">
-    <img src="BertTokenizers/src/Assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/NMZivkovic/BertTokenizers/blob/master/src/Assets/logo.png?raw=true" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">BERTTokenizer for C#</h3>
 
   <p align="center">
-    project_description
+    Source Code of NuGet package for tokenizing sentences and creating input for BERT Models.
     <br />
     ·
     <a href="https://github.com/NMZivkovic/BertTokenizers/issues">Report Bug</a>
@@ -201,7 +201,7 @@ n.zivkovic@rubikscode.net</br>
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [contributors-url]: https://github.com/NMZivkovic/BertTokenizers/graphs/contributors
-[donate-shield]: https://img.shields.io/github/contributors/NMZivkovic/BertTokenizers.svg?style=for-the-badge
+[donate-shield]: https://img.shields.io/badge/Donate-!-555?style=for-the-badge
 [donate-url]: https://www.paypal.com/paypalme/rubikscode
 [forks-shield]: https://img.shields.io/github/forks/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [forks-url]: https://github.com/NMZivkovic/BertTokenizers/network/members
