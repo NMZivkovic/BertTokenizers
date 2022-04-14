@@ -7,7 +7,7 @@
 *** Thanks again!
 -->
 
-[![Donate][donate-shield]][donate-url]
+[![Donate]][donate-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -19,7 +19,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/NMZivkovic/BertTokenizers">
-    <img src="BERTTokenizers/Assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="BertTokenizers/src/Assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">BERTTokenizer for C#</h3>
