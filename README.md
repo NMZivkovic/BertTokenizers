@@ -7,6 +7,7 @@
 *** Thanks again!
 -->
 
+[![Donate][donate-shield]][donate-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -80,7 +81,7 @@ This repository contains tokenizers for following models:<br />
 
 ### Built With
 
-* [.NET 5](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET 6](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -200,6 +201,8 @@ n.zivkovic@rubikscode.net</br>
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [contributors-url]: https://github.com/NMZivkovic/BertTokenizers/graphs/contributors
+[donate-shield]: https://img.shields.io/github/contributors/NMZivkovic/BertTokenizers.svg?style=for-the-badge
+[donate-url]: https://www.paypal.com/paypalme/rubikscode
 [forks-shield]: https://img.shields.io/github/forks/NMZivkovic/BertTokenizers.svg?style=for-the-badge
 [forks-url]: https://github.com/NMZivkovic/BertTokenizers/network/members
 [stars-shield]: https://img.shields.io/github/stars/NMZivkovic/BertTokenizers.svg?style=for-the-badge
