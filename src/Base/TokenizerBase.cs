@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace BERTTokenizers.Base
 {
@@ -118,7 +119,7 @@ namespace BERTTokenizers.Base
             {
                 string prefix = null;
                 int subwordLength = remaining.Length;
-                while (subwordLength >= 2)
+                while (subwordLength >= 1) // was initially 2, which prevents using "character encoding"
                 {
                     string subword = remaining.Substring(0, subwordLength);
                     if (!_vocabularyDict.ContainsKey(subword))
@@ -138,7 +139,8 @@ namespace BERTTokenizers.Base
                     return tokens;
                 }
 
-                remaining = remaining.Replace(prefix, "##");
+                var regex = new Regex(prefix);
+                remaining = regex.Replace(remaining, "##", 1);
 
                 tokens.Add((prefix, _vocabularyDict[prefix]));
             }

@@ -21,7 +21,7 @@
     · BERT Large Uncased</Description>
     <PackageReleaseNotes>Open-source project for BERT tokenizers that can be used in C#.</PackageReleaseNotes>
     <PackageTags>BERT, Tokenizer, charp, dotnet</PackageTags>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
