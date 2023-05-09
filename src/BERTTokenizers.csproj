@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net5.0</TargetFrameworks>
+    <TargetFrameworks>net462;net6.0;net5.0</TargetFrameworks>
     <Authors>Nikola M. Zivkovic</Authors>
     <Company>Rubik's Code (rubikscode.net)</Company>
     <Copyright>Rubik's Code</Copyright>
@@ -79,5 +79,9 @@
   
   <ItemGroup>
     <Folder Include="Assets\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" Condition="'$(TargetFramework)' == 'net462'" />
   </ItemGroup>
 </Project>
