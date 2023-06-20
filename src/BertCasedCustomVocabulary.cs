@@ -2,9 +2,9 @@
 
 namespace BERTTokenizers
 {
-    public class BertUnasedCustomVocabulary : CasedTokenizer
+    public class BertCasedCustomVocabulary : CasedTokenizer
     {
-        public BertUnasedCustomVocabulary(string vocabularyFilePath) : base(vocabularyFilePath) { }
+        public BertCasedCustomVocabulary(string vocabularyFilePath) : base(vocabularyFilePath) { }
 
     }
 
