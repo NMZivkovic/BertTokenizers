@@ -1,4 +1,5 @@
-﻿using BERTTokenizers.Helpers;
+﻿using BERTTokenizers.Extensions;
+using BERTTokenizers.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,6 +88,12 @@ namespace BERTTokenizers.Base
                                 => (tokenindex.Token, tokenindex.VocabularyIndex, segmentindex)).ToList();
         }
 
+        protected virtual IEnumerable<string> TokenizeSentence(string text)
+        {
+            return text.Split(new char[0], StringSplitOptions.RemoveEmptyEntries)
+                .SelectMany(o => o.SplitAndKeep(".,;:\\/?!#$%()=+-*\"'–_`<>&^@{}[]|~'".ToArray()));
+        }
+
         private IEnumerable<long> SegmentIndex(List<(string token, int index)> tokens)
         {
             var segmentIndex = 0;
@@ -152,7 +159,5 @@ namespace BERTTokenizers.Base
 
             return tokens;
         }
-
-        protected abstract IEnumerable<string> TokenizeSentence(string text);
     }
 }

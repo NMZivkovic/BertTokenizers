@@ -25,7 +25,20 @@ namespace BERTTokenizersTests
             Assert.Equal(("love", 2293, 0), tokens[2]);
             Assert.Equal(("you", 2017, 0), tokens[3]);
             Assert.Equal(("[SEP]", 102, 0), tokens[4]);
+        }
 
+        [Fact]
+        public void Tokenize_text_with_linux_line_endings()
+        {
+            var sentence = "Linux\nline\nendings";
+
+            var tokens = _tokenizer.Tokenize(sentence);
+            Assert.Equal(5, tokens.Count);
+            Assert.Equal(("[CLS]", 101, 0), tokens[0]);
+            Assert.Equal(("linux", 11603, 0), tokens[1]);
+            Assert.Equal(("line", 2240, 0), tokens[2]);
+            Assert.Equal(("endings", 21306, 0), tokens[3]);
+            Assert.Equal(("[SEP]", 102, 0), tokens[4]);
         }
 
         [Fact]
@@ -61,7 +74,7 @@ namespace BERTTokenizersTests
         }
 
         [Fact]
-        public void Unokenize_sentence()
+        public void Untokenize_sentence()
         {
             var tokens = new List<string>(){ "she", "##s" };
 
